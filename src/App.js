@@ -2,14 +2,15 @@ import React from "react";
 import Sidebar from "react-sidebar";
 import MaterialTitlePanel from "./components/Sidebar/Material_Title_Panel";
 import SidebarContent from "./components/Sidebar/SidebarContent";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 
 import Home from './components/Home';
 import Collections from './components/Collections';
 import Shop from './components/Shop';
 import Contact from './components/Contact';
 
-import './stylesheets/Logo.css';
+import './stylesheets/App.css';
 
 const styles = {
   contentHeaderMenuLink: {
@@ -18,7 +19,7 @@ const styles = {
     padding: 8
   },
   content: {
-    padding: "16px"
+    padding: "0rem"
   }
 };
 
@@ -79,7 +80,7 @@ export default class App extends React.Component {
             =
           </a>
         )}
-        <a href='/'>
+        <a id='header' href='/'>
           <img id='logo' src={require('./images/logo.png')} alt='logo'/>
         </a>
       </span>
@@ -97,10 +98,12 @@ export default class App extends React.Component {
         <MaterialTitlePanel title={contentHeader}>
           <div style={styles.content}>
             <Router>
-              <Route exact path={'/'} component={Home} />
-              <Route path={'/collections'} component={Collections} /> 
-              <Route path={'/shop'} component={Shop} /> 
-              <Route path={'/contact'} component={Contact} /> 
+              <Switch>
+                <Route exact path={'/'} component={Home} />
+                <Route path={'/collections'} component={Collections} /> 
+                <Route path={'/shop'} component={Shop} /> 
+                <Route path={'/contact'} component={Contact} /> 
+              </Switch>
             </Router>
           </div>
         </MaterialTitlePanel>
