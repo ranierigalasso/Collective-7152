@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Collections from './components/Collections';
 import Shop from './components/Shop';
 import Contact from './components/Contact';
+import LongDistance from './components/LongDistance';
 
 import './stylesheets/App.css';
 
@@ -94,20 +95,23 @@ export default class App extends React.Component {
     };
 
     return (
+      <Router>
+
       <Sidebar {...sidebarProps}>
         <MaterialTitlePanel title={contentHeader}>
           <div className='app-container' style={styles.content}>
-            <Router>
               <Switch>
                 <Route exact path={'/'} component={Home} />
                 <Route path={'/collections'} component={Collections} /> 
+                <Route path={'/long-distance'} component={LongDistance} /> 
                 <Route path={'/shop'} component={Shop} /> 
                 <Route path={'/contact'} component={Contact} /> 
               </Switch>
-            </Router>
           </div>
         </MaterialTitlePanel>
       </Sidebar>
+      </Router>
+
     );
   }
 }

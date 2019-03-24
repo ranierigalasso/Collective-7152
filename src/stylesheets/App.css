@@ -10,6 +10,7 @@
     top:0;
     padding: 1rem ;
     left:0;
+    z-index: 1000;
   }
   .app-container {
     margin-top:2rem;

@@ -1,0 +1,11 @@
+.collection-container {
+  width: 100%;
+  margin: 2rem;
+}
+
+@media (max-width: 600px) {
+  .collection-container {
+    margin:0;
+    margin-bottom: 2rem;
+  }
+}

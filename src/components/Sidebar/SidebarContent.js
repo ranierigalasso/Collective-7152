@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MaterialTitlePanel from "./Material_Title_Panel";
+import { Link } from "react-router-dom";
+
+import '../../stylesheets/SideNavbar.css';
 
 const styles = {
   sidebar: {
@@ -19,9 +22,11 @@ const styles = {
     backgroundColor: "white"
   },
   content: {
+    display:"flex",
+    flexDirection: "column",
     padding: "16px",
     height: "100%",
-    backgroundColor: "white"
+    backgroundColor: "white",
   }
 };
 
@@ -32,19 +37,19 @@ const SidebarContent = props => {
 
   return (
     <MaterialTitlePanel title="Menu" style={style}>
-      <div style={styles.content}>
-        <a href="/" style={styles.sidebarLink}>
+      <div className='sidebar-content' style={styles.content}>
+        <Link to='/'>
           Home
-        </a>
-        <a href="/collections" style={styles.sidebarLink}>
+        </Link>
+        <Link to='/collections'>
           Collections
-        </a>
-        <a href="/shop" style={styles.sidebarLink}>
+        </Link>
+        <Link to='/shop'>
           Shop
-        </a>
-        <a href="/contact" style={styles.sidebarLink}>
+        </Link>
+        <Link to='/contact'>
           Contact
-        </a>
+        </Link>
       </div>
     </MaterialTitlePanel>
   );
