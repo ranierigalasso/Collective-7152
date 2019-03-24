@@ -6,21 +6,23 @@ import '../stylesheets/Contact.css';
 export default class Contact extends Component {
   render() {
     return (
-      <div>
+      <div className='contact-container'>
         <Form>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Control type="email" placeholder="What's your name?" />
+            <Form.Control type="email" placeholder="Name" />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Control type="email" placeholder="What's your email?" />
+            <Form.Control type="email" placeholder="Email" />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Control type="email" placeholder="What's the enquiry about?" />
+            <Form.Control type="email" placeholder="Subject" />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control as="textarea" rows="3" />
           </Form.Group>
-          <Button>Submit Enquiry</Button>
+          <button className='form-btn'>
+            SUBMIT
+          </button>
         </Form>
       </div>
     )

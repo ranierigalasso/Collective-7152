@@ -70,7 +70,7 @@ export default class App extends React.Component {
     const sidebar = <SidebarContent />;
 
     const contentHeader = (
-      <span>
+      <span id='header'>
         {!this.state.docked && (
           <a
             onClick={this.toggleOpen}
@@ -80,7 +80,7 @@ export default class App extends React.Component {
             =
           </a>
         )}
-        <a id='header' href='/'>
+        <a href='/'>
           <img id='logo' src={require('./images/logo.png')} alt='logo'/>
         </a>
       </span>
@@ -96,7 +96,7 @@ export default class App extends React.Component {
     return (
       <Sidebar {...sidebarProps}>
         <MaterialTitlePanel title={contentHeader}>
-          <div style={styles.content}>
+          <div className='app-container' style={styles.content}>
             <Router>
               <Switch>
                 <Route exact path={'/'} component={Home} />

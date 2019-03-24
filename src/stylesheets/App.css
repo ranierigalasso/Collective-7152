@@ -1,3 +1,17 @@
 #logo {
   width: 12.5rem;
 }
+
+@media (max-width: 600px) {
+  #header {
+    position: fixed;
+    background: white;
+    width: 100%;
+    top:0;
+    padding: 1rem ;
+    left:0;
+  }
+  .app-container {
+    margin-top:2rem;
+  }
+}

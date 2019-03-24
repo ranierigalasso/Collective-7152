@@ -1,15 +1,23 @@
 /* Home Grid */
-
+.main-div {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  display: none;
+}
 .grid-container {
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 1rem;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  margin: 2.5rem;
+  margin: 1rem;
 }
 .grid-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  overflow: auto;
 }
 .a {
   grid-column: 1 / 3;
@@ -33,5 +41,19 @@
 }
 #first-img {
   height: 100%;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    display: none;
+  }
+  .container{
+    display: inline;
+  }
+  .container img {
+    padding: .5rem;
+    width: 100%;
+  }
+ 
 }
 
