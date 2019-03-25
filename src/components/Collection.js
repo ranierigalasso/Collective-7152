@@ -8,7 +8,7 @@ export default class Collection extends Component {
   render() {
     const { color } = this.props;
     return (
-      <div className='collection-container' style={{color:color}}>
+      <div className='collection-container'>
         <Card>
           <Carousel>
             <Carousel.Item>
@@ -34,7 +34,7 @@ export default class Collection extends Component {
             </Carousel.Item>
           </Carousel>
           <Card.Body>
-            <Link to={this.props.link}>
+            <Link to={this.props.link} style={{color:color}} >
               <h3><strong>{this.props.name}</strong></h3>
               <p>{this.props.author}</p>
             </Link>

@@ -1,6 +1,9 @@
 {
   "name": "collective-7259",
   "version": "0.1.0",
+  "engines": {
+    "node": "11.8.0"
+  },
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",

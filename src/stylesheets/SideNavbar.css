@@ -3,3 +3,10 @@
   margin-bottom: 2.5rem;
   text-decoration: none;
 }
+.social {
+  display: flex;
+  justify-content: end;
+}
+.social a {
+  margin-right: 1rem;
+}

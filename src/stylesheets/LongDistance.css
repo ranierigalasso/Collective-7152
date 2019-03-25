@@ -1,3 +1,32 @@
-body{
+.longDistance-container{
   background: #255E21;
+  color: white;
+  margin:0;
+  padding: 2rem;
+}
+.longDistance-body{
+  background: #255E21!important;
+}
+.longDistance-container h3 {
+  font-size: 2rem;
+}
+.longDistance-container p {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .longDistance-container{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%;
+    margin-top: 5rem;
+    padding: 0.5rem!important;
+  }
+  .longDistance-container p {
+    font-size: .75rem;
+  }
+  .longDistance-container h3 {
+    font-size: .75rem;
+  }
 }

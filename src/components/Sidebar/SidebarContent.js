@@ -7,7 +7,7 @@ import '../../stylesheets/SideNavbar.css';
 
 const styles = {
   sidebar: {
-    width: 125,
+    width: 150,
     height: "100%"
   },
   sidebarLink: {
@@ -50,6 +50,14 @@ const SidebarContent = props => {
         <Link to='/contact'>
           Contact
         </Link>
+        <div className='social'>
+          <a href='https://www.instagram.com'>
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href='https://www.facebook.com'>
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        </div>
       </div>
     </MaterialTitlePanel>
   );
